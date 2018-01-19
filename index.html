@@ -84,6 +84,12 @@
                     <a data-toggle="modal" data-target="#reserveModal"><button type="button" class="btn btn-sm nav-link btn-warning btn-block">Reserve Table</button></a>
                 </div>
             </div>
+            <div class="btn-group col-sm-2 offset-5" data-toggle="buttons">
+                <label id="show-carousel" class="btn btn-sm btn-success">
+                    <input type="radio" name="options" autocomplete="off" >Show</label>
+                <label id="hide-carousel" class="btn btn-sm btn-danger">
+                    <input type="radio" name="options" autocomplete="off">Hide</label>
+            </div>
         </div>
     </header>
     
@@ -335,6 +341,16 @@
             });
             $("#carousel-play").click(function(){
                 $("#mycarousel").carousel('cycle');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#hide-carousel").click(function(){
+                $("#mycarousel").hide();
+            });
+            $("#show-carousel").click(function(){
+                $("#mycarousel").show();
             });
         });
     </script>
